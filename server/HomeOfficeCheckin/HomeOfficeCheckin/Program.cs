@@ -1,4 +1,5 @@
 using HomeOfficeCheckin.Data;
+using HomeOfficeCheckin.Helpers;
 using HomeOfficeCheckin.Models;
 using HomeOfficeCheckin.Services;
 using HomeOfficeCheckin.Services.IServices;
@@ -23,6 +24,8 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Emai
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<ICheckinService, CheckinService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+
+builder.Services.AddAutoMapper(typeof(MappingHelper));
 
 builder.Services.AddControllers();
 

@@ -50,7 +50,7 @@ namespace HomeOfficeCheckin.Services
         /// <returns>A task representing the asynchronous operation, returning the current open home office time entry.</returns>
         public async Task<HomeOfficeTime> GetCurrentOpenHomeOfficeTimeAsync(string Id)
         {
-            return await _context.HomeOfficeTimes.FirstOrDefaultAsync(t => t.UserId == Id && t.EndTime == null);
+            return await _context.HomeOfficeTimes.FirstOrDefaultAsync(t => t.UserId == Id && t.UpdatedAt == null && string.IsNullOrEmpty(t.EndTime));
         }
 
         /// <summary>
