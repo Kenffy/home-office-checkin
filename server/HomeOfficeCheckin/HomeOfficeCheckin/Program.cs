@@ -1,5 +1,7 @@
 using HomeOfficeCheckin.Data;
 using HomeOfficeCheckin.Models;
+using HomeOfficeCheckin.Services;
+using HomeOfficeCheckin.Services.IServices;
 using HomeOfficeChecking.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +19,10 @@ builder.Services.AddDbContext<HomeOfficeTimeDbContext>(option =>
 
 // get mail server configuration
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailServerSettings"));
+
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<ICheckinService, CheckinService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddControllers();
 
