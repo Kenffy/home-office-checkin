@@ -1,0 +1,78 @@
+.checkin {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.actions-panel {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  align-self: center;
+  border-radius: 0.5rem;
+  border: 2px solid lightblue;
+}
+
+.actions-panel .actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.actions-panel .actions .start-btn,
+.actions-panel .actions .stop-btn {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 2px solid gray;
+  cursor: pointer;
+}
+
+.actions-panel .actions .start-btn {
+  border-color: #07b307;
+  color: #07b307;
+  background-color: transparent;
+}
+
+.actions-panel .actions .start-btn:hover {
+  border-color: green;
+  color: green;
+}
+
+.actions-panel .actions .stop-btn {
+  background-color: red;
+}
+
+.actions-panel .actions .stop-btn:hover {
+  background-color: #d20808;
+}
+
+.actions-panel .actions .start-btn:disabled,
+.actions-panel .actions .stop-btn:disabled {
+  border-color: gray;
+  color: #fff;
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+.actions-panel .actions .icon {
+  font-size: 3rem;
+}
+
+@media (max-width: 580px) {
+  .actions-panel {
+    width: 90%;
+  }
+}
