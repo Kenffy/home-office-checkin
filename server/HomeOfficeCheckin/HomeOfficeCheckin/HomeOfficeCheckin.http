@@ -1,0 +1,6 @@
+@HomeOfficeCheckin_HostAddress = http://localhost:5095
+
+GET {{HomeOfficeCheckin_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

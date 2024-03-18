@@ -1,0 +1,9 @@
+*obj
+*bin
+*appsettings.json
+*.db
+*.db-shm
+*.db-wal
+*.rdb
+*.vs
+HomeOfficeCheckin/.vs
