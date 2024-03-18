@@ -25,3 +25,18 @@ Development steps
      
 6. Client services implemetation and api integration
 7. Bugfix and Details...
+
+Login Page
+![2024-03-18_15h19_57](https://github.com/Kenffy/home-office-checkin/assets/31046518/a629f8ca-5b36-42af-af38-78b839406dc0)
+
+Checkin Start
+![2024-03-18_15h20_36](https://github.com/Kenffy/home-office-checkin/assets/31046518/be3c4d16-acda-423f-97c0-e39a40e86ce0)
+
+Checkin Stop
+![2024-03-18_15h21_09](https://github.com/Kenffy/home-office-checkin/assets/31046518/dfd2d374-5cd6-4d24-9b5c-bba3aa2f1dac)
+
+Checkin Details
+![2024-03-18_15h21_45](https://github.com/Kenffy/home-office-checkin/assets/31046518/6470af59-a2c8-424f-b944-1687e3e96cbb)
+
+
+
