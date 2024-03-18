@@ -40,7 +40,7 @@ Checkin Stop
 ![2024-03-18_15h21_09](https://github.com/Kenffy/home-office-checkin/assets/31046518/dfd2d374-5cd6-4d24-9b5c-bba3aa2f1dac)
 
 Checkin Details
-![2024-03-18_15h21_45](https://github.com/Kenffy/home-office-checkin/assets/31046518/6470af59-a2c8-424f-b944-1687e3e96cbb)
+![2024-03-18_15h24_06](https://github.com/Kenffy/home-office-checkin/assets/31046518/081f9738-8e2f-4037-9f73-ff996acd77e8)
 
 
 
