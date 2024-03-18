@@ -42,5 +42,9 @@ Checkin Stop
 Checkin Details
 ![2024-03-18_15h24_06](https://github.com/Kenffy/home-office-checkin/assets/31046518/081f9738-8e2f-4037-9f73-ff996acd77e8)
 
+Emai Check
+![Screenshot at Mar 18 16-26-13](https://github.com/Kenffy/home-office-checkin/assets/31046518/2b5286d4-b918-4d03-9ab5-23718257f183)
+
+
 
 
