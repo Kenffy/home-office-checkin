@@ -1,13 +1,21 @@
 <div class="checkin">
   <div class="actions-panel">
     <div class="actions">
-      <button class="start-btn">
+      <button
+        class="start-btn"
+        [disabled]="homeOfficeStarted"
+        (click)="startHomeOffice()"
+      >
         <i class="fa-solid fa-play icon"></i>
       </button>
-      <button class="stop-btn">
+      <button
+        class="stop-btn"
+        [disabled]="!homeOfficeStarted"
+        (click)="stopHomeOffice()"
+      >
         <i class="fa-solid fa-stop icon"></i>
       </button>
     </div>
-    <button>Übersicht</button>
+    <button (click)="onHomeOfficeTimeDetails()">Übersicht</button>
   </div>
 </div>

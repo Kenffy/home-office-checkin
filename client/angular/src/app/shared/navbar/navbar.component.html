@@ -5,11 +5,18 @@
     </a>
 
     <div>
-      <span class="user">Hello Mustermann</span>
-      <button>
+      <span *ngIf="authService.currentUser$ | async as user" class="user"
+        >Hello {{ user.userName }}</span
+      >
+      <button *ngIf="(authService.currentUser$ | async) === null">
         <a href="/login">Login</a>
       </button>
-      <button (click)="signOut()">Logout</button>
+      <button
+        (click)="signOut()"
+        *ngIf="(authService.currentUser$ | async) !== null"
+      >
+        Logout
+      </button>
     </div>
   </div>
 </nav>
