@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div class="login">
+  <div class="wrapper">
+    <h2>Login</h2>
+    <span *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</span>
+    <form class="login-form" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>

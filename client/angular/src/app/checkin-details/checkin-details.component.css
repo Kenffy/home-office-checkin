@@ -1,0 +1,78 @@
+.details {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.details-wrapper {
+  color: #333;
+  background-color: #fff;
+  padding: 2rem;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 6rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details-wrapper .nav-back-btn {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #555;
+  padding: 0;
+}
+
+.details-wrapper .nav-back-btn:hover {
+  color: #333;
+}
+
+.back-icon {
+  margin-right: 0.5rem;
+}
+
+.calendar-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.times-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid lightblue;
+  border-radius: 0.5rem;
+}
+
+.current-date {
+  padding: 0.8rem 0.5rem;
+  background-color: lightblue;
+}
+
+.current-date-times {
+  display: flex;
+  flex-direction: column;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.current-date-times span {
+  padding: 0.5rem;
+  border-top: 1px solid lightblue;
+}
+
+@media (max-width: 580px) {
+  .details-wrapper {
+    width: 90%;
+  }
+}
