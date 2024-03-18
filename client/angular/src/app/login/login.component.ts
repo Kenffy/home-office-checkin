@@ -31,7 +31,7 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe({
-        next: () => this.router.navigateByUrl('/home'),
+        next: () => this.router.navigateByUrl('/checkin'),
         error: (err) => {
           this.errorMessage = err.error.message;
         },
