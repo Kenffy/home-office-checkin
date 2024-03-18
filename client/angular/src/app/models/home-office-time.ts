@@ -4,4 +4,5 @@ export interface IHomeOfficeTime {
   startTime: string;
   endTime: string;
   createdAt: Date;
+  updatedAt: Date | null;
 }

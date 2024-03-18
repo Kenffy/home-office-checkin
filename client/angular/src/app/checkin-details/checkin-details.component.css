@@ -46,6 +46,13 @@
   gap: 1rem;
 }
 
+.calendar-wrapper .datepicker {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 2px solid lightblue;
+}
+
 .times-wrapper {
   margin-top: 1rem;
   display: flex;
