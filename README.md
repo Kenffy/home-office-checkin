@@ -26,6 +26,10 @@ Development steps
 6. Client services implemetation and api integration
 7. Bugfix and Details...
 
+
+Note: Web API: please set the the Email server accordingly to: appsettings.Development.json
+
+
 Login Page
 ![2024-03-18_15h19_57](https://github.com/Kenffy/home-office-checkin/assets/31046518/a629f8ca-5b36-42af-af38-78b839406dc0)
 
