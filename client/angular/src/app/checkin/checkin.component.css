@@ -71,6 +71,14 @@
   font-size: 3rem;
 }
 
+.modal {
+  visibility: hidden;
+}
+
+.modal.active {
+  visibility: visible;
+}
+
 @media (max-width: 580px) {
   .actions-panel {
     width: 90%;
