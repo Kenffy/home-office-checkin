@@ -4,15 +4,19 @@ import { IHomeOfficeTime } from '../models/home-office-time';
 import { CheckinService } from '../services/checkin.service';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { CheckinDetailsComponent } from '../checkin-details/checkin-details.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-checkin',
   standalone: true,
-  imports: [],
+  imports: [CheckinDetailsComponent, CommonModule],
   templateUrl: './checkin.component.html',
   styleUrl: './checkin.component.css',
 })
 export class CheckinComponent {
+  openModal: boolean = false;
+  modalActive: string = '';
   homeOfficeStarted: boolean = false;
   authUser: IEmployee | null = null;
   currentHomeOfficeTime: IHomeOfficeTime | null = null;
@@ -97,6 +101,16 @@ export class CheckinComponent {
   onHomeOfficeTimeDetails() {
     if (this.authUser) {
       this.router.navigateByUrl(`/details/${this.authUser.id}`);
+    }
+  }
+
+  toggleModal(args: boolean) {
+    if (args) {
+      this.openModal = true;
+      this.modalActive = 'active';
+    } else {
+      this.openModal = false;
+      this.modalActive = '';
     }
   }
 }

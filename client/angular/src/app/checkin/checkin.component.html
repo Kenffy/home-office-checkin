@@ -16,6 +16,12 @@
         <i class="fa-solid fa-stop icon"></i>
       </button>
     </div>
-    <button (click)="onHomeOfficeTimeDetails()">Übersicht</button>
+    <button (click)="toggleModal(true)">Übersicht</button>
   </div>
+</div>
+<div class="modal {{ modalActive }}">
+  <app-checkin-details
+    (closeModal)="toggleModal($event)"
+    [user]="authUser"
+  ></app-checkin-details>
 </div>

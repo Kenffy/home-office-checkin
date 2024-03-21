@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IEmployee } from '../models/employee';
 import { IHomeOfficeTime } from '../models/home-office-time';
-import { AuthService } from '../services/auth.service';
 import { CheckinService } from '../services/checkin.service';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -15,50 +13,30 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './checkin-details.component.css',
 })
 export class CheckinDetailsComponent {
+  @Input() user: IEmployee | null = null;
+  @Output() closeModal = new EventEmitter<boolean>();
+
   selectedDate: any;
   currentDate = '';
-  userId: string | null = '';
   authUser: IEmployee | null = null;
   homeOfficeTimes: IHomeOfficeTime[] = [];
 
-  constructor(
-    private authService: AuthService,
-    private checkinService: CheckinService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {
-    this.userId = this.route.snapshot.paramMap.get('id');
-  }
+  constructor(private checkinService: CheckinService) {}
 
   ngOnInit(): void {
-    this.loadAuthUser();
     this.getFormattedCurrentDate();
     this.getHomeOfficeTimes(this.selectedDate);
   }
 
-  onCloseCheckinDetails() {
-    this.router.navigateByUrl('/checkin');
-  }
-
-  loadAuthUser() {
-    this.authService.currentUser$.subscribe({
-      next: (value) => {
-        this.authUser = value;
-      },
-      error: (err) => console.log(err),
-    });
-  }
-
   loadHomeOfficeTimes() {
-    if (!this.userId || !this.selectedDate) return;
-    console.log(this.selectedDate);
+    if (!this.user || !this.selectedDate) return;
     this.getHomeOfficeTimes(this.selectedDate);
   }
 
   getHomeOfficeTimes(date: any) {
-    if (!this.userId) return;
+    if (!this.user) return;
     this.checkinService
-      .getHomeOfficeTimesByDayAsync(this.userId, date)
+      .getHomeOfficeTimesByDayAsync(this.user.id, date)
       .subscribe({
         next: (response) => {
           this.homeOfficeTimes = response;
@@ -80,5 +58,9 @@ export class CheckinDetailsComponent {
     this.currentDate = `${day < 10 ? '0' + day : day}.${
       month < 10 ? '0' + month : month
     }.${year}`;
+  }
+
+  onCloseModal() {
+    this.closeModal.emit();
   }
 }
