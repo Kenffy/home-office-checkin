@@ -1,0 +1,114 @@
+.home {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid lightblue;
+}
+
+.nav-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-wrapper .user {
+  margin-right: 1rem;
+}
+
+.nav-wrapper a {
+  color: #333;
+}
+
+.actions-panel {
+  margin-top: 4rem;
+  padding: 2rem 1rem;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  align-self: center;
+  border-radius: 0.5rem;
+  border: 2px solid lightblue;
+}
+
+.actions-panel .actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.actions-panel .actions .start-btn,
+.actions-panel .actions .stop-btn {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 2px solid gray;
+  cursor: pointer;
+}
+
+.actions-panel .actions .start-btn {
+  border-color: #07b307;
+  color: #07b307;
+  background-color: transparent;
+}
+
+.actions-panel .actions .start-btn:hover {
+  border-color: green;
+  color: green;
+}
+
+.actions-panel .actions .stop-btn {
+  background-color: red;
+}
+
+.actions-panel .actions .stop-btn:hover {
+  background-color: #d20808;
+}
+
+.actions-panel .actions .start-btn:disabled,
+.actions-panel .actions .stop-btn:disabled {
+  border-color: gray;
+  color: #fff;
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+.actions-panel .actions .icon {
+  font-size: 3rem;
+}
+
+@media (max-width: 580px) {
+  .nav-wrapper {
+    padding: 0 1rem;
+  }
+  .nav-wrapper h2 {
+    font-size: 1.3rem;
+  }
+
+  .nav-wrapper .user {
+    font-size: 14px;
+    margin-right: 0.5rem;
+  }
+  .actions-panel {
+    width: 90%;
+  }
+}
